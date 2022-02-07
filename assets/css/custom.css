@@ -171,3 +171,23 @@ header.hero-block a.btn-secondary:link,
 header.hero-block a.btn-secondary:visited {
     color: var(--gray-100)
 }
+
+
+.theme-three { background-color: var(--blue-700) }
+
+
+.theme-four { background-color: var(--yellow-200) }
+
+
+
+.theme-five { background-color: var(--purple-400) }
+
+
+.theme-six { background-color: var(--teal-500) }
+
+header.hero-block { background-color: var(--blue-800) }
+
+.container-contact-form { background-color: var(--blue-700) }
+
+
+
