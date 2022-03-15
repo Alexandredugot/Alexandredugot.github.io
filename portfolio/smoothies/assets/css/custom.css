@@ -171,31 +171,31 @@ section>p.standfirst {
 }
 
 body {
-    font-family: 'Neucha, serif'
+    font-family: "Quintessential"
 }
 
 .hero-block h1 {
     font-size: calc(60px + (132 - 60) * ((100vw - 320px)/ (1600 - 320)));
     margin-bottom: 40px;
     letter-spacing: 2px;
-    font-family: 'Neucha, serif'
+    font-family: "Quintessential"
 }
 
 .hero-block h2 {
     font-size: calc(32px + (64 - 32) * ((100vw - 320px)/ (1600 - 320)));
     letter-spacing: 1px;
-    font-family: 'Neucha, serif'
+    font-family: "Quintessential"
 }
 
 .cols-2-split .col-2 h2 {
     font-size: calc(32px + (58 - 32) * ((100vw - 320px) / (1600 - 320)));
     letter-spacing: 2px;
-    font-family: 'Neucha, serif'
+    font-family: "Quintessential"
 }
 
 .cols-2-split .col-2 p {
     font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1600 - 320)));
     letter-spacing: 1px;
     line-height: 1.6;
-    font-family: 'Neucha, serif'
+    font-family: "Quintessential"
 }

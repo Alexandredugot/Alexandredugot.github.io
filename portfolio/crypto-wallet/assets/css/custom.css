@@ -123,7 +123,7 @@
 /* Global font */
 
 body {
-    font-family: var(--global-font)
+    font-family: 'Antic Slab', serif;
 }
 
 .container-menu.menu-desktop {

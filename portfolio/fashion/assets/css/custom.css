@@ -1,5 +1,9 @@
 /* Add your custom styles here */
 
+body {
+    font-family: 'Smooch Sans', sans-serif;
+}
+
 section.section-style-1.theme-light {
     background-color: var(--green-800)
 }
