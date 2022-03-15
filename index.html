@@ -29,17 +29,19 @@
     <!-- Google Material Design Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" 
-    />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S8YK6JBBC0"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-S8YK6JBBC0');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-S8YK6JBBC0');
     </script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
@@ -50,14 +52,23 @@
 
 
     <!-- Begin Inspectlet Asynchronous Code -->
-<script type="text/javascript">
-    (function() {
-    window.__insp = window.__insp || [];
-    __insp.push(['wid', 829072781]);
-    var ldinsp = function(){
-    if(typeof window.__inspld != "undefined") return; window.__inspld = 1; var insp = document.createElement('script'); insp.type = 'text/javascript'; insp.async = true; insp.id = "inspsync"; insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=829072781&r=' + Math.floor(new Date().getTime()/3600000); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(insp, x); };
-    setTimeout(ldinsp, 0);
-    })();
+    <script type="text/javascript">
+        (function() {
+            window.__insp = window.__insp || [];
+            __insp.push(['wid', 829072781]);
+            var ldinsp = function() {
+                if (typeof window.__inspld != "undefined") return;
+                window.__inspld = 1;
+                var insp = document.createElement('script');
+                insp.type = 'text/javascript';
+                insp.async = true;
+                insp.id = "inspsync";
+                insp.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cdn.inspectlet.com/inspectlet.js?wid=829072781&r=' + Math.floor(new Date().getTime() / 3600000);
+                var x = document.getElementsByTagName('script')[0];
+                x.parentNode.insertBefore(insp, x);
+            };
+            setTimeout(ldinsp, 0);
+        })();
     </script>
     <!-- End Inspectlet Asynchronous Code -->
 
@@ -89,7 +100,7 @@
 
         <div class="bg-overlay"></div>
 
-        
+
 
     </header>
 
@@ -132,7 +143,7 @@
             <div class="col-4">
                 <figure><img src="assets/img/project-crypto-wallet.jpg" alt="Gap of Dunloe"></figure>
 
-                <a href="#" class="btn btn-secondary"><i class="fas fa-arrow-right"></i><span>View Project</span></a>
+                <a href="portfolio/crypto-wallet/index.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i><span>View Project</span></a>
 
 
                 <h3>project-crypto-wallet</h3>
@@ -190,23 +201,23 @@
 
     <script src="assets/js/menu.js"></script>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
     <script>
-    window.cookieconsent.initialise({
-    "palette": {
-        "popup": {
-        "background": "#000"
-        },
-        "button": {
-          "background": "#f1d600"
-        }
-    },
-    "content": {
-        "href": "https://alexandredugot.github.io/Privacy.html"
-    }
-    });
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#000"
+                },
+                "button": {
+                    "background": "#f1d600"
+                }
+            },
+            "content": {
+                "href": "https://alexandredugot.github.io/Privacy.html"
+            }
+        });
     </script>
 
 </body>
