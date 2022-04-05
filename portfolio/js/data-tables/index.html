@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Portfolio | Joe Bloggs | Front-end Developer | </title>
-    <meta name="description" content="A sample collection of my recent JavaScript projects.">
+    <title>JavaScript Data Tables Project</title>
+    <meta name="description" content="Uses the Fetch API to retrieve a searchable list of movie titles and images from the Internet Movie Database.">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="../../assets/css/lunadoge.min.css" />
-    <link rel="stylesheet" href="../../assets/css/css-javascript.css" />
+    <link rel="stylesheet" href="../../../assets/css/lunadoge.min.css" />
+    <link rel="stylesheet" href="../../../assets/css/css-javascript.css" />
 
     <style>
         /* ============ Header Colours =============*/
@@ -33,11 +33,8 @@
             background-image: radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 1) 0, transparent 50%), radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 1) 0, transparent 50%), radial-gradient(at 0% 50%, hsla(355, 85%, 93%, 1) 0, transparent 50%), radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0, transparent 50%), radial-gradient(at 0% 100%, hsla(22, 100%, 77%, 1) 0, transparent 50%), radial-gradient(at 80% 100%, hsla(242, 100%, 70%, 1) 0, transparent 50%), radial-gradient(at 0% 0%, hsla(343, 100%, 76%, 1) 0, transparent 50%);
         }
         
-        .theme-js .col-4 {
-            background-color: var(--green-100);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        .theme-js .col-2 {
+            background-color: var(--green-100)
         }
         
         .theme-js h3 {
@@ -56,17 +53,96 @@
             border-radius: 6px
         }
         /* Button Colours: active state */
+        /* .theme-js a.btn:hover { background-color: darkblue }
+
+        .theme-js a.btn { background-image: linear-gradient(to right,#e052a0,#f15c41) } 
+        .theme-js a.btn:hover { filter: brightness(140%) saturate(140%) }  */
+        /* ========= ENDS CUSTOM CSS FOR WEB PAGE ======= */
         
-        .theme-js a.btn:hover {
-            background-color: darkblue
+        .theme-js {
+            text-align: center
         }
         
-        .theme-js a.btn {
-            background-image: linear-gradient(to right, #e052a0, #f15c41)
+        .container-table {
+            margin: 0 auto;
         }
         
-        .theme-js a.btn:hover {
-            filter: brightness(140%) saturate(140%)
+        @media (min-width: 768px) {
+            .container-table {
+                padding-top: 4%;
+                padding-bottom: 4%
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .container-table {
+                padding: 5% 10%
+            }
+        }
+        /* All tables */
+        
+        .data-table {
+            border-collapse: collapse;
+            font-size: 18px;
+            width: 100%;
+            overflow: scroll;
+            margin-bottom: 56px;
+            border: solid 1px #888;
+            box-shadow: 8px 8px 8px #888;
+        }
+        
+        .data-table td,
+        .data-table th {
+            padding: 8px 18px;
+            text-align: left
+        }
+        /* Tables with light theme */
+        
+        .table-theme-light thead tr th {
+            background-color: lightgray
+        }
+        
+        .table-theme-light tr:nth-child(odd) {
+            background-color: #fff
+        }
+        
+        .table-theme-light tr:nth-child(even) {
+            background-color: #E1E4E7
+        }
+        /* Delete button */
+        
+        .theme-js .table-theme-light td a.btn {
+            background-color: blue;
+            color: #fff;
+            padding: 4px 12px;
+            font-size: 90%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .theme-js .table-theme-light td a.btn:hover {
+            background-color: darkblue;
+        }
+        
+        .table-theme-light td a.btn i {
+            margin-right: 12px
+        }
+        
+        .table-theme-light td a.btn>* {
+            pointer-events: none;
+        }
+        
+        button.add-row {
+            padding: 10px 22px;
+            background-color: red;
+            color: #fff;
+            font-size: 20px;
+            border-radius: 50px;
+            margin-bottom: 48px;
+        }
+        
+        button.add-row i {
+            margin-left: 8px
         }
     </style>
 
@@ -82,11 +158,11 @@
     <!-- navigation menu -->
 
     <nav class="container-menu menu-desktop menu-sticky">
-        <a href="#"><img src="../../assets/img/website-logo.png" alt="website logo"></a>
+        <a href="#"><img src="../../../assets/img/website-logo.png" alt="website logo"></a>
         <ul class="">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../portfolio/index.html">Portfolio</a></li>
-            <li><a href="../../contact/index.html" id="btn-cta"><span>Contact</span><i class="fas fa-arrow-right"></i></a></li>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../portfolio/index.html">Portfolio</a></li>
+            <li><a href="../../../contact/index.html" id="btn-cta"><span>Contact</span><i class="fas fa-arrow-right"></i></a></li>
         </ul>
         <div class="item-icon">
             <div class="bar1"></div>
@@ -98,9 +174,8 @@
     <!-- header hero block -->
     <header class="hero-block hero-block-js">
         <div class="hero-text-container">
-            <h1>JavaScript Projects</h1>
-            <h2>A selection of my recent JavaScript projects.</h2>
-            <img src="../../assets/img/code.png" alt="Sample JavaScript code">
+            <h1>Data Tables <span>JavaScript Project</span></h1>
+            <h2>Populates an HTML table with data stored in an array. Includes the option to remove data items. View my complete collection of <a href="../index.html">JavaScript projects</a>.</h2>
         </div>
     </header>
 
@@ -109,130 +184,83 @@
 
         <section class="container-flex theme-js">
 
-            <div class="col-4">
-
-                <h3>Data Tables</h3>
-
-                <p>Populates an HTML table with data stored in an array. Includes the option to remove data items.</p>
-
-                <div class="container-btn">
-                    <a href="data-tables/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Weather for Dublin</h3>
-
-                <p>Uses the Fetch API to retrieve current weather information for the city of Dublin, Ireland.</p>
-
-                <div class="container-btn">
-                    <a href="weather/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Calculator with Modules</h3>
-
-                <p>A basic calculator that uses export/import statements to share code with a JavaScript module file.</p>
-
-                <div class="container-btn">
-                    <a href="calculator-modules/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
+            <div class="container-table">
 
 
-            <div class="col-4">
+                <table class="data-table table-theme-light" id="myTable">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentData"></tbody>
+                </table>
 
-                <h3>Movies Listing</h3>
+                <p><button class="add-row" id="btn_populate" onclick="populateTable()">Populate Table <i class="fa-solid fa-circle-plus"></i></button></p>
 
-                <p>Uses the Fetch API to retrieve a searchable list of movie titles and images from the Internet Movie Database.</p>
-
-                <div class="container-btn">
-                    <a href="movies/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Random Quotes Generator</h3>
-
-                <p>Uses the Fetch API to retrieve a randomly-choosen selection of ten inspiring quotations.</p>
-
-                <div class="container-btn">
-                    <a href="quotes/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Image Blue Filter</h3>
-
-                <p>Uses CSS variables and HTML custom data attributes to adjust the filter blur property of an image.</p>
-
-                <div class="container-btn">
-                    <a href="image-blur-filter/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Counter</h3>
-
-                <p>An increment and decrement counter that changes the colour of the number displayed on the web page.</p>
-
-                <div class="container-btn">
-                    <a href="counter/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Tip Calculator</h3>
-
-                <p>Calculates the tip for a restaurant bill based on the level of service and the number of customers.</p>
-
-                <div class="container-btn">
-                    <a href="tip-calculator/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4">
-
-                <h3>Image Slideshow</h3>
-
-                <p>A slideshow with an array of images from Dublin city, Ireland.</p>
-
-                <div class="container-btn">
-                    <a href="image-slideshow/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-
-            <div class="col-4">
-
-                <h3>Random Colour Generator</h3>
-
-                <p>Uses an array of hexadecimal values to randomly generate a background colour for the web page.</p>
-
-                <div class="container-btn">
-                    <a href="colours/index.html" class="btn btn-primary"><span>View project</span> <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-4" style="background-color: transparent;">
-                <p>&nbsp;</p>
-            </div>
-
-            <div class="col-4" style="background-color: transparent;">
-
-                <p>&nbsp;</p>
             </div>
 
         </section>
 
     </main>
+
+    <script>
+        let all_btns = document.querySelectorAll('#myTable .btn');
+
+        all_btns.forEach(el => el.addEventListener('click', event => {
+            event.preventDefault();
+            // get button id
+            btn_id = event.currentTarget.id;
+            deleteRow(btn_id);
+        }));
+
+
+        function deleteRow(btn_id) {
+            const rows = document.querySelectorAll("#myTable tr");
+            for (let i = rows.length; i--;) {
+                if (rows[i].innerHTML.includes(btn_id)) {
+                    rows[i].parentNode.removeChild(rows[i]);
+                }
+            }
+        }
+
+        const arrStudentData = [{
+            id: "1224",
+            firstname: "John",
+            lastname: "Smith"
+        }, {
+            id: "5678",
+            firstname: "Jane",
+            lastname: "Higgins"
+        }, {
+            id: "1717",
+            firstname: "Frank",
+            lastname: "Jones"
+        }, {
+            id: "2121",
+            firstname: "Mary",
+            lastname: "Dwyer"
+        }];
+
+        function populateTable() {
+            let tableContent = "";
+            let delBtn = "<a class=\"btn\" onclick=\"deleteRow(this)\"><i class=\"fa-solid fa-trash-can\"></i>Delete</a>";
+            for (var i in arrStudentData) {
+                tableContent += "<tr>";
+                tableContent += "<td>" + arrStudentData[i].id + "</td>" +
+                    "<td>" + arrStudentData[i].firstname + "</td>" +
+                    "<td>" + arrStudentData[i].lastname + "</td>" +
+                    "<td><a class=\"btn\" onclick=\"deleteRow(" + arrStudentData[i].id + ")\"><i class=\"fa-solid fa-trash-can\"></i>Delete</a></td>";
+                tableContent += "</tr>";
+            }
+
+            document.getElementById("studentData").innerHTML = tableContent;
+            document.getElementById("btn_populate").innerHTML = "Refresh Table <i class=\"fa-solid fa-circle-plus\"></i>";
+        }
+    </script>
 
 
     <!-- footer -->
@@ -243,21 +271,21 @@
         <h3>Excellence in digital creation</h3>
 
         <ul class="footer-links">
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../portfolio/index.html">Portfolio</a></li>
-            <li><a href="../../contact/index.html">Contact</a></li>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../../portfolio/index.html">Portfolio</a></li>
+            <li><a href="../../../contact/index.html">Contact</a></li>
         </ul>
 
         <ul class="footer-icons">
             <li><a href="https://www.linkedin.com/nnnnnnnnnnn" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/Alexandredugot/Alexandredugot.github.io" target="_blank"><i class="fab fa-github-square"></i></a></li>
+            <li><a href="https://github.com/nnnnnnnnnn" target="_blank"><i class="fab fa-github-square"></i></a></li>
         </ul>
 
-        <p class="index.html"> <a href="../../privacy.html" style="color: #fff; background-color:transparent;">Privacy &amp; Legal</a> </p>
+        <p class="index.html"> <a href="../../../privacy.html" style="color: #fff; background-color:transparent;">Privacy &amp; Legal</a> </p>
 
     </footer>
 
-    <script src="../../assets/js/menu.js"></script>
+    <script src="../../../assets/js/menu.js"></script>
 
 
 </body>
